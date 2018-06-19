@@ -51,12 +51,44 @@ npm install fastclick --save
 
 ### iconfont
 
+注册，创建项目，下载图标
+
+```
+import './assets/styles/iconfont.css'
+```
 
 
+### stylus
+
+```
+npm install stylus --save
+
+npm install stylus-loader --save
+```
 
 
+### rem 布局
 
+移动端一般使用rem进行布局
 
+1rem = html  font-size = 50px
 
+两个元素之间间距大于1个像素, 解决
 
+```
+margin-left: -.04rem
+```
+
+### css中引入其他css
+
+1. 使用 @import, 不能直接使用import
+2. 相对src路径, 使用 `~@` 不能直接 @
+
+```
+@import '~@/assets/styles/varibles.styl'
+```
+
+#### 在配置中创建路径别名
+
+build/webpack.base.conf.js 文件中 resolve 选项添加
 
