@@ -92,3 +92,76 @@ margin-left: -.04rem
 
 build/webpack.base.conf.js 文件中 resolve 选项添加
 
+```
+resolve: {
+  extensions: ['.js', '.vue', '.json'],
+  alias: {
+    'vue$': 'vue/dist/vue.esm.js',
+    '@': resolve('src'),
+    'styles': resolve('src/assets/styles'), //起别名
+  }
+},
+```
+
+### 轮播图
+
+使用第三方插件
+
+[轮播图](https://github.com/surmon-china/vue-awesome-swiper)
+
+
+
+#### 图片宽高比例自适应
+
+设置height是0, overflow是hidden, padding-bottom:的值是width/height 图片宽度除以高度
+
+```
+.wrapper
+    overflow: hidden
+    width: 100%
+    height: 0
+    padding-bottom: 31.25%
+```
+
+第二种, 可能部分浏览器有问题，所以用上面那种
+
+```
+.wrapper
+    height: 31.25vw
+```
+
+
+#### 组件css样式穿透
+
+当组件使用scoped, 内部再写的样式就不能改变外部元素的显示，使用 `>>>` 进行穿透
+
+```
+.wrapper >>> .swiper-pagination-bullet-active
+    background: #fff
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
