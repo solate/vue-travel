@@ -16,7 +16,7 @@ import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 
 import axios from 'axios'
-import { mapState } from 'vuex'
+// import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
@@ -37,7 +37,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['city'])
+    // ...mapState(['city'])
   },
   methods: {
     getHomeInfo () {

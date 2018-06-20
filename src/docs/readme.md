@@ -141,6 +141,12 @@ resolve: {
 ```
 
 
+#### axios 使用
+
+
+```
+npm install axios --save
+```
 
 
 
