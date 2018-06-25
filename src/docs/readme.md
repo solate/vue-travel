@@ -161,6 +161,14 @@ npm install better-scroll --save
 
 
 
+### Vuex
+
+```
+npm install vuex --save
+```
+
+
+
 
 
 

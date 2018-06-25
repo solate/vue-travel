@@ -38,7 +38,7 @@ export default {
     }
   },
   updated () {
-    this.startY = this.$refs['A'][0].offsetTop //初始赋值
+    this.startY = this.$refs['A'][0].offsetTop
   },
   methods: {
     handleLetterClick (e) {
@@ -52,13 +52,14 @@ export default {
         if (this.timer) {
           clearTimeout(this.timer)
         }
+
         this.timer = setTimeout(() => {
           const touchY = e.touches[0].clientY - 79
           const index = Math.floor((touchY - this.startY) / 20)
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
           }
-        }, 16) //函数节流
+        }, 16)
       }
     },
     handleTouchEnd () {
