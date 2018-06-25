@@ -168,12 +168,26 @@ npm install vuex --save
 ```
 
 
+### localStorage
+
+使用localStorage 本地存储，类似cookie
+
+最好在外部包裹一个 try ... catch 不然有些浏览器关闭的话会抛出异常
 
 
+### keep-alive
 
+当路由加载过一次后，就将页面放入内存中，下一次不需要渲染页面。
 
-
-
+```
+<template>
+  <div id="app">
+    <keep-alive exclude="Detail">
+      <router-view/>
+    </keep-alive>
+  </div>
+</template>
+```
 
 
 
