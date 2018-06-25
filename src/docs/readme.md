@@ -190,9 +190,29 @@ npm install vuex --save
 ```
 
 
+处理缓存不会每次发送ajax 请求
 
+1. exclude 参数, 除了什么组件不缓存，其他的都缓存
+2. activated() 生命周期判断参数是否相同，如果相同不发送，不相同重新发送
 
+```
+activated () {
+  if (this.lastCity !== this.city) {
+    this.lastCity = this.city
+    this.getHomeInfo()
+  }
+}
+```
 
+### 滚动行为
+
+scrollBehavior 每次页面切换 x,y 都是0, 也就是顶部
+
+```
+scrollBehavior (to, from, savedPosition) {
+  return { x: 0, y: 0 }
+}
+```
 
 
 
