@@ -149,6 +149,15 @@ npm install axios --save
 ```
 
 
+#### better-scroll 使用
+
+isScroll 的封装
+
+城市 字母滚动使用该插件进行滚动
+
+```
+npm install better-scroll --save
+```
 
 
 
