@@ -9,6 +9,7 @@
         <span class="item-title-icon"></span>
         {{item.title}}
       </div>
+      <!--递归组件 使用name定义的组件进行递归显示-->
       <div v-if="item.children" class="item-chilren">
         <detail-list :list="item.children"></detail-list>
       </div>
